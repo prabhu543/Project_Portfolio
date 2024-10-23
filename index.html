@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Web</title>
+    <script src="https://kit.fontawesome.com/cec115b967.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400..800&display=swap');
+        
+        .custom-shadow {
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script> <!-- Added Typed.js -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page1">
+        <nav>
+            <div class="logo">
+                <img src="portfolio_logo.png" alt="" class="mt-8">
+            </div>
+            <div class="nav2">
+                <li><a href="#About">About</a></li>
+                <li><a href="#Skills">Skills</a></li>
+                <li><a href="#Services">Services</a></li>
+                <li><a href="#Portfolio">Projects</a></li>
+                <li><a href="#Certificates">Certifications</a></li>
+                <li><a href="#contact" id="contact">Contact</a></li>
+                <i class="fa-regular fa-circle-xmark hidden" onclick="close_menu()"></i>
+            </div>
+            <i class="fa-solid fa-bars hidden text-xl" onclick="open_menu()"></i>
+        </nav>
+        <div class="hero">
+            <div class="hero_head w-1/2 flex flex-col justify-center">
+                <h2 class="font-medium text-2xl my-8">Hi, I'm <span> Rahul Bhat</span></h2>
+                <h1 class="font-bold text-gray-400 text-5xl">I am a Passionate <br><span id="element"></span></h1>
+                <p class="text-gray-500"> I'm Rahul Bhat, a passionate open source enthusiast and web developer with a growing interest in 
+                    machine learning. I thrive on learning and applying new frameworks 
+                    through hands-on projects.
+                </p>
+                <div class="resume">Resume <i class="fa-solid fa-arrow-right"></i></div>
+                <div class="information">
+                    <div class="information_box">
+                        <h1>2</h1>
+                        <h3>Years of <br> Experience</h3>
+                    </div>
+                    <div class="information_box">
+                        <h1>4</h1>
+                        <h3>Projects <br> Completed </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="hero_img">
+                <div class="circle">
+                    <img src="profile_img.png" alt="" class="mb-6">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- About Section -->
+    <section id="About" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-8">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="about-image.jpg" alt="About Me" class="rounded-lg shadow-lg">
+                </div>
+                <div class="md:w-1/2 md:pl-8">
+                    <p class="text-lg mb-4">
+                        Hello! I'm Rahul Bhat, a passionate web developer and open source enthusiast. With a keen interest in machine learning, I'm constantly exploring new technologies and frameworks to expand my skill set.
+                    </p>
+                    <p class="text-lg mb-4">
+                        My journey in tech began two years ago, and since then, I've completed four exciting projects that have honed my abilities in various areas of web development and machine learning.
+                    </p>
+                    <p class="text-lg">
+                        When I'm not coding, you can find me contributing to open source projects, attending tech meetups, or experimenting with new AI models. I believe in the power of technology to make a positive impact on the world, and I'm excited to be part of this ever-evolving field.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="Skills" class="min-h-screen bg-gray-900 text-white py-16 px-4">
+        <div class="container mx-auto flex flex-col justify-center h-full">
+            <h1 class="text-5xl font-bold text-center mb-8 text-yellow-500">What I Do</h1>
+            <p class="text-xl text-center mb-16 max-w-3xl mx-auto">
+                I am from India and currently living in Karnataka. I am doing Bachelors in Engineering and I will graduate this year. I am an enthusiast programmer and intern at XYZ company.
+            </p>
+            <h2 class="text-3xl font-semibold text-center mb-12 pb-4 inline-block mx-auto border-b-4 border-yellow-500">My Skills</h2>
+            <div class="flex flex-wrap justify-center gap-4">
+                <div class="skill-card bg-gray-800 p-4 rounded-lg text-center transition-transform hover:scale-105 custom-shadow w-36 h-36 flex flex-col justify-center items-center">
+                    <i class="fas fa-code text-4xl mb-3 text-blue-500"></i>
+                    <h3 class="text-base font-semibold">C</h3>
+                </div>
+                <div class="skill-card bg-gray-800 p-4 rounded-lg text-center transition-transform hover:scale-105 custom-shadow w-36 h-36 flex flex-col justify-center items-center">
+                    <i class="fab fa-java text-4xl mb-3 text-red-500"></i>
+                    <h3 class="text-base font-semibold">Java</h3>
+                </div>
+                <div class="skill-card bg-gray-800 p-4 rounded-lg text-center transition-transform hover:scale-105 custom-shadow w-36 h-36 flex flex-col justify-center items-center">
+                    <i class="fab fa-python text-4xl mb-3 text-yellow-500"></i>
+                    <h3 class="text-base font-semibold">Python</h3>
+                </div>
+                <div class="skill-card bg-gray-800 p-4 rounded-lg text-center transition-transform hover:scale-105 custom-shadow w-36 h-36 flex flex-col justify-center items-center">
+                    <i class="fab fa-js text-4xl mb-3 text-yellow-400"></i>
+                    <h3 class="text-base font-semibold">JavaScript</h3>
+                </div>
+                <div class="skill-card bg-gray-800 p-4 rounded-lg text-center transition-transform hover:scale-105 custom-shadow w-36 h-36 flex flex-col justify-center items-center">
+                    <i class="fab fa-react text-4xl mb-3 text-blue-400"></i>
+                    <h3 class="text-base font-semibold">React</h3>
+                </div>
+                <div class="skill-card bg-gray-800 p-4 rounded-lg text-center transition-transform hover:scale-105 custom-shadow w-36 h-36 flex flex-col justify-center items-center">
+                    <i class="fas fa-database text-4xl mb-3 text-green-500"></i>
+                    <h3 class="text-base font-semibold">Hibernate</h3>
+                </div>
+                <div class="skill-card bg-gray-800 p-4 rounded-lg text-center transition-transform hover:scale-105 custom-shadow w-36 h-36 flex flex-col justify-center items-center">
+                    <i class="fas fa-database text-4xl mb-3 text-orange-500"></i>
+                    <h3 class="text-base font-semibold">SQL</h3>
+                </div>
+                <div class="skill-card bg-gray-800 p-4 rounded-lg text-center transition-transform hover:scale-105 custom-shadow w-36 h-36 flex flex-col justify-center items-center">
+                    <i class="fas fa-database text-4xl mb-3 text-blue-300"></i>
+                    <h3 class="text-base font-semibold">MySQL</h3>
+                </div>
+                <div class="skill-card bg-gray-800 p-4 rounded-lg text-center transition-transform hover:scale-105 custom-shadow w-36 h-36 flex flex-col justify-center items-center">
+                    <i class="fab fa-git-alt text-4xl mb-3 text-red-500"></i>
+                    <h3 class="text-base font-semibold">Git</h3>
+                </div>
+                <div class="skill-card bg-gray-800 p-4 rounded-lg text-center transition-transform hover:scale-105 custom-shadow w-36 h-36 flex flex-col justify-center items-center">
+                    <i class="fab fa-android text-4xl mb-3 text-green-500"></i>
+                    <h3 class="text-base font-semibold">Kotlin</h3>
+                </div>
+                <div class="skill-card bg-gray-800 p-4 rounded-lg text-center transition-transform hover:scale-105 custom-shadow w-36 h-36 flex flex-col justify-center items-center">
+                    <i class="fab fa-css3-alt text-4xl mb-3 text-blue-500"></i>
+                    <h3 class="text-base font-semibold">CSS</h3>
+                </div>
+                <div class="skill-card bg-gray-800 p-4 rounded-lg text-center transition-transform hover:scale-105 custom-shadow w-36 h-36 flex flex-col justify-center items-center">
+                    <i class="fab fa-html5 text-4xl mb-3 text-orange-500"></i>
+                    <h3 class="text-base font-semibold">HTML</h3>
+                </div>
+                <div class="skill-card bg-gray-800 p-4 rounded-lg text-center transition-transform hover:scale-105 custom-shadow w-36 h-36 flex flex-col justify-center items-center">
+                    <i class="fab fa-github text-4xl mb-3 text-white"></i>
+                    <h3 class="text-base font-semibold">GitHub</h3>
+                </div>
+                <div class="skill-card bg-gray-800 p-4 rounded-lg text-center transition-transform hover:scale-105 custom-shadow w-36 h-36 flex flex-col justify-center items-center">
+                    <i class="fab fa-php text-4xl mb-3 text-purple-500"></i>
+                    <h3 class="text-base font-semibold">PHP</h3>
+                </div>
+                <div class="skill-card bg-gray-800 p-4 rounded-lg text-center transition-transform hover:scale-105 custom-shadow w-36 h-36 flex flex-col justify-center items-center">
+                    <i class="fab fa-node-js text-4xl mb-3 text-green-500"></i>
+                    <h3 class="text-base font-semibold">Node.js</h3>
+                </div>
+                <div class="skill-card bg-gray-800 p-4 rounded-lg text-center transition-transform hover:scale-105 custom-shadow w-36 h-36 flex flex-col justify-center items-center">
+                    <i class="fas fa-database text-4xl mb-3 text-blue-400"></i>
+                    <h3 class="text-base font-semibold">PostgreSQL</h3>
+                </div>
+                <div class="skill-card bg-gray-800 p-4 rounded-lg text-center transition-transform hover:scale-105 custom-shadow w-36 h-36 flex flex-col justify-center items-center">
+                    <i class="fab fa-android text-4xl mb-3 text-green-500"></i>
+                    <h3 class="text-base font-semibold">Android</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: "Baloo Paaji 2",sans-serif;
+    box-sizing: border-box;
+}
+
+.page1{
+    background-color: #030e20;
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 150px;
+    padding: 10px 50px;
+}
+.nav2{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+    font-size: 18px;
+}
+li,a{
+    list-style-type: none;
+    text-decoration: none;
+    color: #fff;
+}
+#contact{
+    background-color: #ff004f; 
+    border-radius: 4px;
+    padding: 7px 15px;
+}
+.hero{
+    width: 100%;
+    height: calc(100vh - 150px);
+    display: flex;
+    padding: 10px 100px;
+    font-family: "Baloo Paaji 2",sans-serif;
+}
+.hero_head p{
+    margin-top: 30px;
+    line-height: 30px;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+}
+.resume{
+    width: 100px;
+    padding: 8px 80px;
+    margin-top: 25px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid gray;
+    gap: 20px;
+}
+.hero_img{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero_img .circle{
+    background-color: rgba(156, 154, 154, 0.126);
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0 50px #ffffffea;
+}
+
+.information{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.information_box{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 25%;
+}
+.information_box h1{
+    font-size: 55px;
+}
+.information_box h3{
+    font-size: 20px;
+    color: gray;
+}

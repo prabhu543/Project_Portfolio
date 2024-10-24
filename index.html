@@ -18,11 +18,11 @@
 </head>
 <body>
     <div class="page1">
-        <nav class="flex flex-col md:flex-row items-center justify-between p-4 md:p-10">
+        <nav class="flex md:flex-row items-center justify-between p-4 md:p-10">
             <div class="logo mb-4 md:mb-0">
                 <img src="portfolio_logo.png" alt="" class="h-12 md:h-16">
             </div>
-            <div class="nav2 flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
+            <div class="nav2 hidden md:flex md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
                 <li><a href="#About">About</a></li>
                 <li><a href="#Skills">Skills</a></li>
                 <li><a href="#Services">Services</a></li>
@@ -30,7 +30,7 @@
                 <li><a href="#Certificates">Certifications</a></li>
                 <li><a href="#contact" id="contact">Contact</a></li>
             </div>
-            <i class="fa-solid fa-bars md:hidden text-xl mt-4" id="menu-toggle"></i>
+            <i class="fas fa-bars md:hidden text-xl" id="menu-toggle"></i>
         </nav>
         <div class="hero flex flex-col md:flex-row p-4 md:p-10 items-center">
             <div class="hero_head w-full md:w-1/2 flex flex-col justify-center mb-8 md:mb-0">
@@ -62,34 +62,36 @@
     </div>
     
     <!-- About Section -->
-    <section id="About" class="py-20 bg-gradient-to-b from-gray-900 to-gray-800 text-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12 text-yellow-500">About Me</h2>
+    <section id="About">
+        <div class="container">
+            <h2>About Me</h2>
             <div class="flex flex-col lg:flex-row items-center justify-between">
-                <div class="lg:w-1/2 mb-10 lg:mb-0">
-                    <img src="about-image.jpg" alt="Rahul Bhat" class="rounded-lg shadow-2xl w-full max-w-md mx-auto transform hover:scale-105 transition-transform duration-300">
+                <div class="lg:w-1/3 mb-10 lg:mb-0">
+                    <div class="profile-image-container">
+                        <img src="my dp.png" alt="Rahul Bhat">
+                    </div>
                 </div>
-                <div class="lg:w-1/2 lg:pl-12">
-                    <h3 class="text-2xl font-semibold mb-4 text-yellow-400">Hello, I'm Rahul Bhat</h3>
-                    <p class="text-lg mb-6 leading-relaxed">
+                <div class="lg:w-2/3 lg:pl-12">
+                    <h3>Hello, I'm Rahul Bhat</h3>
+                    <p>
                         As a passionate Full Stack Web Developer, Android App Developer, and Machine Learning enthusiast, I bring creativity and technical expertise to every project I undertake. With a strong foundation in various programming languages and frameworks, I strive to create innovative solutions that make a difference.
                     </p>
-                    <p class="text-lg mb-6 leading-relaxed">
+                    <p>
                         Currently pursuing my Bachelor's degree in Engineering, I've honed my skills through hands-on projects and internships. My journey in tech is driven by curiosity and a desire to push the boundaries of what's possible in software development.
                     </p>
-                    <div class="grid grid-cols-2 gap-4 mb-6">
-                        <div class="bg-gray-700 p-4 rounded-lg">
-                            <h4 class="font-semibold text-yellow-400 mb-2">Education</h4>
+                    <div class="grid">
+                        <div class="bg-gray-700">
+                            <h4>Education</h4>
                             <p>B.E. in Computer Science</p>
-                            <p class="text-sm text-gray-400">Graduating in 2023</p>
+                            <p class="text-sm">Graduating in 2023</p>
                         </div>
-                        <div class="bg-gray-700 p-4 rounded-lg">
-                            <h4 class="font-semibold text-yellow-400 mb-2">Experience</h4>
+                        <div class="bg-gray-700">
+                            <h4>Experience</h4>
                             <p>Intern at XYZ Company</p>
-                            <p class="text-sm text-gray-400">2022 - Present</p>
+                            <p class="text-sm">2022 - Present</p>
                         </div>
                     </div>
-                    <a href="#contact" class="inline-block bg-yellow-500 text-gray-900 font-semibold py-3 px-6 rounded-lg hover:bg-yellow-400 transition-colors duration-300">Get In Touch</a>
+                    <a href="#contact" class="inline-block">Get In Touch</a>
                 </div>
             </div>
         </div>

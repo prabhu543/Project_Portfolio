@@ -7,7 +7,7 @@
 }
 
 .page1 {
-    background-color: #030e20;
+    background-color: #030e20; /* Updated to match the skills page */
     width: 100%;
     min-height: 100vh;
     color: #fff;
@@ -17,6 +17,10 @@
 
 nav {
     width: 100%;
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space items evenly */
+    padding: 0 1rem; /* Add padding to the left and right */
 }
 
 .nav2 {
@@ -42,7 +46,8 @@ li a:hover {
 }
 
 #contact:hover {
-    background-color: #d10040;
+    background-color: #dfd113;
+    color: #000000;
 }
 
 .hero {
@@ -94,7 +99,7 @@ li a:hover {
 
 .hero_img .circle .profile-image {
     position: absolute;
-    top: -60px;
+    top: -100px;
     width: auto;
     height: 500px;
     object-fit: contain;
@@ -108,42 +113,362 @@ li a:hover {
     text-align: center;
 }
 
+/* About Section Styles */
+#About {
+    position: relative;
+    overflow: hidden;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #1a2639, #0d1b2a);
+}
+
+#About::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('path/to/subtle-pattern.png') repeat;
+    opacity: 0.05;
+    z-index: 1;
+}
+
+#About .container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 15px;
+}
+
+#About h2 {
+    position: relative;
+    display: inline-block;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #ffd700;
+}
+
+#About h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 50%;
+    height: 3px;
+    background-color: #ffd700;
+}
+
+#About .profile-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 350px;
+    margin: 0 auto 30px;
+}
+
+/* #About .profile-image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 215, 0, 0.2), rgba(255, 215, 0, 0));
+    z-index: 1;
+} */
+
+#About .profile-image-container img {
+    transition: transform 0.5s ease;
+    width: 100%;
+    height: auto;
+}
+
+#About .profile-image-container:hover img {
+    transform: scale(1.05);
+}
+
+#About h3 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #ffd700;
+}
+
+#About h3::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #ffd700;
+}
+
+#About p {
+    position: relative;
+    padding-left: 20px;
+    border-left: 3px solid #ffd700;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+#About .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px; 
+}
+
+#About .bg-gray-700 {
+    background-color: rgba(31, 41, 55, 0.8);
+    border-radius: 8px;
+    padding: 20px; 
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#About .bg-gray-700::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ffd700, #ff8c00);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+#About .bg-gray-700:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#About .bg-gray-700:hover::before {
+    transform: scaleX(1);
+}
+
+#About .bg-gray-700 h4 {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+#About .bg-gray-700 h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #ffd700;
+    transition: width 0.3s ease;
+}
+
+#About .bg-gray-700:hover h4::after {
+    width: 60px;
+}
+
+#About .bg-gray-700 p {
+    color: #e0e0e0;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#About .bg-gray-700 .text-sm {
+    color: #ffd700;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+#About .inline-block {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: transparent;
+    color: #ffd700;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #ffd700;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#About .inline-block::before,
+#About .inline-block::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        60deg,
+        transparent,
+        rgba(255, 215, 0, 0.1),
+        rgba(255, 215, 0, 0.5),
+        rgba(255, 215, 0, 0.1),
+        transparent
+    );
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+#About .inline-block::before {
+    animation: flash 3s linear infinite;
+}
+
+#About .inline-block::after {
+    animation: flash 3s linear infinite 1.5s;
+}
+
+#About .inline-block:hover {
+    color: #1a2639;
+    background-color: #ffd700;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+#About .inline-block:active {
+    transform: scale(0.95);
+}
+
+@keyframes flash {
+    0% {
+        left: -50%;
+        top: -50%;
+    }
+    100% {
+        left: 50%;
+        top: 50%;
+    }
+}
+
+@media (max-width: 1024px) {
+    #About h2 {
+        font-size: 2.2rem;
+    }
+
+    #About h3 {
+        font-size: 1.6rem;
+    }
+
+    #About p {
+        font-size: 0.95rem;
+    }
+}
+
 @media (max-width: 768px) {
-    .nav2 {
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #030e20;
-        padding: 20px;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    #About {
+        padding: 60px 15px; 
     }
 
-    .nav2.show {
-        display: flex;
+    #About .profile-image-container {
+        max-width: 200px; 
     }
 
-    .hero_img .circle {
-        width: 200px;
-        height: 200px;
-    }
-
-    .hero_head h1 {
+    #About h2 {
         font-size: 2rem;
+        margin-bottom: 30px; 
     }
 
-    .hero_head p {
+    #About h3 {
+        font-size: 1.4rem;
+    }
+
+    #About p {
+        font-size: 0.9rem;
+        padding-left: 15px; 
+    }
+
+    #About .grid {
+        grid-template-columns: 1fr;
+        gap: 15px; 
+    }
+
+    #About .bg-gray-700 {
+        padding: 15px; 
+    }
+
+    #About .bg-gray-700 h4 {
+        font-size: 1.1rem;
+    }
+
+    #About .bg-gray-700 p {
         font-size: 0.9rem;
     }
 
-    .information_box h1 {
-        font-size: 2.5rem;
-    }
-
-    .information_box h3 {
+    #About .bg-gray-700 .text-sm {
         font-size: 0.8rem;
     }
+
+    #About .inline-block {
+        padding: 10px 20px; 
+        font-size: 0.9rem; 
+    }
+
+    .nav2 {
+        display: flex; /* Ensure flex display */
+        flex-direction: row; /* Maintain row layout */
+        justify-content: space-between; /* Space between items */
+        padding: 0 1rem; /* Add padding to the left and right */
+        background-color: rgba(3, 14, 32, 0.95);
+        z-index: 1000;
+    }
+
+    .nav2.hidden {
+        display: none;
+    }
+
+    #menu-toggle {
+        z-index: 1001;
+    }
+}
+
+@media (max-width: 480px) {
+    #About h2 {
+        font-size: 1.8rem;
+    }
+
+    #About h3 {
+        font-size: 1.3rem;
+    }
+
+    #About p {
+        font-size: 0.85rem;
+    }
+
+    #About .profile-image-container {
+        max-width: 180px; 
+    }
+    #About .bg-gray-700 h4 {
+        font-size: 1rem;
+    }
+
+    #About .bg-gray-700 p {
+        font-size: 0.85rem;
+    }
+
+    #About .bg-gray-700 .text-sm {
+        font-size: 0.75rem;
+    }
+    
 }
 
 @media (min-width: 769px) {
@@ -164,4 +489,9 @@ li a:hover {
         width: 400px;
         height: 400px;
     }
+}
+
+.logo img {
+    display: block; /* Ensure the image is treated as a block element */
+    margin: 0 auto; /* Center the image horizontally */
 }

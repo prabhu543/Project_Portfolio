@@ -18,67 +18,78 @@
 </head>
 <body>
     <div class="page1">
-        <nav>
-            <div class="logo">
-                <img src="portfolio_logo.png" alt="" class="mt-8">
+        <nav class="flex flex-col md:flex-row items-center justify-between p-4 md:p-10">
+            <div class="logo mb-4 md:mb-0">
+                <img src="portfolio_logo.png" alt="" class="h-12 md:h-16">
             </div>
-            <div class="nav2">
+            <div class="nav2 flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
                 <li><a href="#About">About</a></li>
                 <li><a href="#Skills">Skills</a></li>
                 <li><a href="#Services">Services</a></li>
                 <li><a href="#Portfolio">Projects</a></li>
                 <li><a href="#Certificates">Certifications</a></li>
                 <li><a href="#contact" id="contact">Contact</a></li>
-                <i class="fa-regular fa-circle-xmark hidden" onclick="close_menu()"></i>
             </div>
-            <i class="fa-solid fa-bars hidden text-xl" onclick="open_menu()"></i>
+            <i class="fa-solid fa-bars md:hidden text-xl mt-4" id="menu-toggle"></i>
         </nav>
-        <div class="hero">
-            <div class="hero_head w-1/2 flex flex-col justify-center">
-                <h2 class="font-medium text-2xl my-8">Hi, I'm <span> Rahul Bhat</span></h2>
-                <h1 class="font-bold text-gray-400 text-5xl">I am a Passionate <br><span id="element"></span></h1>
-                <p class="text-gray-500"> I'm Rahul Bhat, a passionate open source enthusiast and web developer with a growing interest in 
+        <div class="hero flex flex-col md:flex-row p-4 md:p-10 items-center">
+            <div class="hero_head w-full md:w-1/2 flex flex-col justify-center mb-8 md:mb-0">
+                <h2 class="font-medium text-xl md:text-2xl my-4 md:my-8">Hi, I'm <span class="text-yellow-500">Rahul Bhat</span></h2>
+                <h1 class="font-bold text-gray-400 text-3xl md:text-5xl">I am a Passionate <br><span id="element"></span></h1>
+                <p class="text-gray-500 text-sm md:text-base mt-4 md:mt-8">
+                    I'm Rahul Bhat, a passionate open source enthusiast and web developer with a growing interest in 
                     machine learning. I thrive on learning and applying new frameworks 
                     through hands-on projects.
                 </p>
-                <div class="resume">Resume <i class="fa-solid fa-arrow-right"></i></div>
-                <div class="information">
+                <div class="resume mt-6 md:mt-8 cursor-pointer hover:bg-gray-700 transition-colors">Resume <i class="fa-solid fa-arrow-right"></i></div>
+                <div class="information mt-8 md:mt-12 flex justify-around">
                     <div class="information_box">
-                        <h1>2</h1>
-                        <h3>Years of <br> Experience</h3>
+                        <h1 class="text-3xl md:text-5xl text-yellow-500">2</h1>
+                        <h3 class="text-sm md:text-base">Years of <br> Experience</h3>
                     </div>
                     <div class="information_box">
-                        <h1>4</h1>
-                        <h3>Projects <br> Completed </h3>
+                        <h1 class="text-3xl md:text-5xl text-yellow-500">4</h1>
+                        <h3 class="text-sm md:text-base">Projects <br> Completed </h3>
                     </div>
                 </div>
             </div>
-            <div class="hero_img">
+            <div class="hero_img w-full md:w-1/2 flex justify-center items-center mt-8 md:mt-0">
                 <div class="circle">
-                    <img src="profile_img.png" alt="" class="mb-6">
+                    <img src="profile_img.png" alt="" class="profile-image">
                 </div>
             </div>
         </div>
     </div>
     
     <!-- About Section -->
-    <section id="About" class="py-16 bg-gray-100">
+    <section id="About" class="py-20 bg-gradient-to-b from-gray-900 to-gray-800 text-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-8">About Me</h2>
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-8 md:mb-0">
-                    <img src="about-image.jpg" alt="About Me" class="rounded-lg shadow-lg">
+            <h2 class="text-4xl font-bold text-center mb-12 text-yellow-500">About Me</h2>
+            <div class="flex flex-col lg:flex-row items-center justify-between">
+                <div class="lg:w-1/2 mb-10 lg:mb-0">
+                    <img src="about-image.jpg" alt="Rahul Bhat" class="rounded-lg shadow-2xl w-full max-w-md mx-auto transform hover:scale-105 transition-transform duration-300">
                 </div>
-                <div class="md:w-1/2 md:pl-8">
-                    <p class="text-lg mb-4">
-                        Hello! I'm Rahul Bhat, a passionate web developer and open source enthusiast. With a keen interest in machine learning, I'm constantly exploring new technologies and frameworks to expand my skill set.
+                <div class="lg:w-1/2 lg:pl-12">
+                    <h3 class="text-2xl font-semibold mb-4 text-yellow-400">Hello, I'm Rahul Bhat</h3>
+                    <p class="text-lg mb-6 leading-relaxed">
+                        As a passionate Full Stack Web Developer, Android App Developer, and Machine Learning enthusiast, I bring creativity and technical expertise to every project I undertake. With a strong foundation in various programming languages and frameworks, I strive to create innovative solutions that make a difference.
                     </p>
-                    <p class="text-lg mb-4">
-                        My journey in tech began two years ago, and since then, I've completed four exciting projects that have honed my abilities in various areas of web development and machine learning.
+                    <p class="text-lg mb-6 leading-relaxed">
+                        Currently pursuing my Bachelor's degree in Engineering, I've honed my skills through hands-on projects and internships. My journey in tech is driven by curiosity and a desire to push the boundaries of what's possible in software development.
                     </p>
-                    <p class="text-lg">
-                        When I'm not coding, you can find me contributing to open source projects, attending tech meetups, or experimenting with new AI models. I believe in the power of technology to make a positive impact on the world, and I'm excited to be part of this ever-evolving field.
-                    </p>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="bg-gray-700 p-4 rounded-lg">
+                            <h4 class="font-semibold text-yellow-400 mb-2">Education</h4>
+                            <p>B.E. in Computer Science</p>
+                            <p class="text-sm text-gray-400">Graduating in 2023</p>
+                        </div>
+                        <div class="bg-gray-700 p-4 rounded-lg">
+                            <h4 class="font-semibold text-yellow-400 mb-2">Experience</h4>
+                            <p>Intern at XYZ Company</p>
+                            <p class="text-sm text-gray-400">2022 - Present</p>
+                        </div>
+                    </div>
+                    <a href="#contact" class="inline-block bg-yellow-500 text-gray-900 font-semibold py-3 px-6 rounded-lg hover:bg-yellow-400 transition-colors duration-300">Get In Touch</a>
                 </div>
             </div>
         </div>

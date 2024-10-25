@@ -39,15 +39,101 @@ li a:hover {
 }
 
 #contact {
-    background-color: #ff004f;
-    border-radius: 4px;
-    padding: 7px 15px;
-    transition: background-color 0.3s ease;
+    background: linear-gradient(135deg, #0d1b2a, #1a2639);
+    padding: 4rem 2rem;
 }
 
-#contact:hover {
-    background-color: #dfd113;
-    color: #000000;
+#contact h1 {
+    font-size: 2.5rem;
+    color: #ffd700;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+#contact h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: #ffd700;
+}
+
+#contact form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#contact .form-group {
+    margin-bottom: 1.5rem;
+}
+
+#contact label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #ffd700;
+    font-weight: bold;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    outline: none;
+    border-color: #ffd700;
+    box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.2);
+}
+
+#contact button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: #ffd700;
+    color: #1a2639;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#contact button:hover {
+    background-color: #ffeb3b;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    #contact {
+        padding: 3rem 1rem;
+    }
+
+    #contact h1 {
+        font-size: 2rem;
+    }
+
+    #contact form {
+        padding: 1.5rem;
+    }
 }
 
 .hero {
@@ -495,3 +581,150 @@ li a:hover {
     display: block; /* Ensure the image is treated as a block element */
     margin: 0 auto; /* Center the image horizontally */
 }
+
+/* Projects Section CSS */
+#Projects {
+    background: linear-gradient(135deg, #0d1b2a, #1a2639);
+    padding: 4rem 2rem;
+}
+
+#Projects h1 {
+    font-size: 2.5rem;
+    color: #ffd700;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+#Projects h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: #ffd700;
+}
+
+#Projects .project-card {
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #1a2639, #0d1b2a);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#Projects .project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+#Projects .project-card h3 {
+    color: #ffeb3b;
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+#Projects .project-card p {
+    color: #d1d5db;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+
+#Projects .project-card img {
+    transition: transform 0.5s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#Projects .project-card:hover img {
+    transform: scale(1.1);
+}
+
+#Projects .overlay {
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+#Projects .project-card:hover .overlay {
+    opacity: 1;
+}
+
+#Projects .project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+#Projects .project-link,
+#Projects .source-code-link {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#Projects .project-link {
+    background-color: #ffeb3b;
+    color: #1a2639;
+}
+
+#Projects .source-code-link {
+    background-color: #4a5568;
+    color: #ffffff;
+}
+
+#Projects .project-link:hover,
+#Projects .source-code-link:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#Projects .project-link:hover {
+    background-color: #ffd700;
+}
+
+#Projects .source-code-link:hover {
+    background-color: #2d3748;
+}
+
+@media (max-width: 768px) {
+    #Projects {
+        padding: 3rem 1rem;
+    }
+
+    #Projects h1 {
+        font-size: 2rem;
+    }
+
+    #Projects .project-card h3 {
+        font-size: 1.3rem;
+    }
+
+    #Projects .project-card p {
+        font-size: 0.9rem;
+    }
+
+    #Projects .project-link,
+    #Projects .source-code-link {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+

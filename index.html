@@ -178,6 +178,75 @@
         </div>
     </section>
 
+    <!-- Certificates Section -->
+    <section id="Certificates" class="min-h-screen bg-gray-800 text-white py-16 px-4">
+        <div class="container mx-auto">
+            <h1 class="text-5xl font-bold text-center mb-8 text-yellow-500">Certificates</h1>
+            <div class="flex flex-wrap justify-center gap-4">
+                <!-- Add certificate items here -->
+                <div class="certificate-card bg-gray-700 p-4 rounded-lg text-center custom-shadow w-60 h-60 flex flex-col justify-center items-center">
+                    <h3 class="text-xl font-semibold">Certificate Name</h3>
+                    <p class="text-sm mt-2">Description or details about the certificate.</p>
+                </div>
+                <!-- Repeat for more certificates -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="Projects" class="min-h-screen bg-gray-900 text-white py-16 px-4">
+        <div class="container mx-auto">
+            <h1 class="text-5xl font-bold text-center mb-8 text-yellow-500">Projects</h1>
+            <div class="flex flex-wrap justify-center gap-8">
+                <div class="project-card relative bg-gray-800 rounded-lg custom-shadow h-80 overflow-hidden">
+                    <img src="Untitled design (2).png" alt="Project Image" class="w-full h-full object-cover">
+                    <div class="overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-center items-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="text-2xl font-semibold mb-2">Spotify Player</h3>
+                        <p class="text-sm px-4">Inspired by Spotify, this project is a music streaming app with a sleek interface, allowing users to create playlists and discover new music.</p>
+                        <div class="project-links">
+                            <a href="https://rahulbhat-spotify.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-link">View Project</a>
+                            <a href="https://github.com/Mrahulbhat/Cyber-Crime-Management-System" target="_blank" rel="noopener noreferrer" class="source-code-link">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card relative bg-gray-800 rounded-lg custom-shadow w-72 h-80 overflow-hidden">
+                    <img src="another-image.png" alt="Project Image" class="w-full h-full object-cover">
+                    <div class="overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-center items-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="text-2xl font-semibold mb-2">Project Name 2</h3>
+                        <p class="text-sm px-4">A podcast platform that curates content based on user preferences, featuring a modern design and seamless playback experience.</p>
+                        <div class="project-links">
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">View Project</a>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="source-code-link">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more project cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section (Footer) -->
+    <footer id="contact">
+        <div class="container">
+            <h1>Contact Me</h1>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

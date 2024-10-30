@@ -11,6 +11,44 @@
         .custom-shadow {
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
         }
+
+        /* Add these styles for the contact button */
+        .contact-btn {
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            padding: 8px 20px;
+            border-radius: 25px;
+            color: #1a2639;
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
+            color: #1a2639 !important; /* Override the default link hover color */
+        }
+
+        .contact-btn:active {
+            transform: translateY(-1px);
+        }
+
+        /* Add ripple effect */
+        .contact-btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease-out, height 0.6s ease-out;
+        }
     </style>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script> <!-- Added Typed.js -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -28,7 +66,7 @@
                 <li><a href="#Services">Services</a></li>
                 <li><a href="#Portfolio">Projects</a></li>
                 <li><a href="#Certificates">Certifications</a></li>
-                <li><a href="#contact" id="contact">Contact</a></li>
+                <li><a href="#contact" class="contact-btn">Contact</a></li>
             </div>
             <i class="fas fa-bars md:hidden text-xl" id="menu-toggle"></i>
         </nav>
@@ -228,21 +266,66 @@
     <!-- Contact Section (Footer) -->
     <footer id="contact">
         <div class="container">
-            <h1>Contact Me</h1>
+            <div class="contact-info">
+                <h1>Get In Touch</h1>
+                <p>Feel free to reach out to me for any questions or opportunities!</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="info">
+                            <h3>Email</h3>
+                            <p>your.email@example.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div class="info">
+                            <h3>Phone</h3>
+                            <p>+1 234 567 890</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="info">
+                            <h3>Location</h3>
+                            <p>Karnataka, India</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
             <form>
                 <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" required>
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" required placeholder="John Doe">
                 </div>
+                
                 <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" required>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required placeholder="john@example.com">
                 </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" required placeholder="Project Inquiry">
+                </div>
+                
                 <div class="form-group">
                     <label for="message">Message</label>
-                    <textarea id="message" rows="4" required></textarea>
+                    <textarea id="message" rows="4" required placeholder="Your message here..."></textarea>
                 </div>
-                <button type="submit">Send Message</button>
+                
+                <button type="submit">Send Message <i class="fas fa-paper-plane"></i></button>
             </form>
         </div>
     </footer>
